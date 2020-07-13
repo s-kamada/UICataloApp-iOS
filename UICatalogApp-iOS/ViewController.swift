@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var previewLabel: UILabel!
+    var tableView: UITableView?
+	
+	let cellReusableIdentifier = "tableViewCell"
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
+		navigationController?.title = "UILabel"
+        
+        previewLabel.isAccessibilityElement = false
 	}
-
-
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 1
+        }
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReusableIdentifier, for: indexPath) as? TableViewCell else { return
+    //
+    //        }
+            return UITableViewCell.init()
+        }
+}

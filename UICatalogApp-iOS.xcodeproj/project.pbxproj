@@ -13,6 +13,8 @@
 		D9512C422337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9512C402337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld */; };
 		D9512C442337D20A00AF25E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9512C432337D20A00AF25E0 /* Assets.xcassets */; };
 		D9512C472337D20A00AF25E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9512C452337D20A00AF25E0 /* LaunchScreen.storyboard */; };
+		D9512C51233899BF00AF25E0 /* PropertiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9512C50233899BF00AF25E0 /* PropertiesTableViewCell.swift */; };
+		D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133024BC4BB30010FF96 /* Parameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D9512C432337D20A00AF25E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9512C462337D20A00AF25E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9512C482337D20A00AF25E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9512C50233899BF00AF25E0 /* PropertiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesTableViewCell.swift; sourceTree = "<group>"; };
+		D9B1133024BC4BB30010FF96 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				D9512C392337D20800AF25E0 /* AppDelegate.swift */,
 				D9512C3B2337D20800AF25E0 /* ViewController.swift */,
+				D9512C50233899BF00AF25E0 /* PropertiesTableViewCell.swift */,
 				D9512C3D2337D20800AF25E0 /* Main.storyboard */,
 				D9512C432337D20A00AF25E0 /* Assets.xcassets */,
 				D9512C452337D20A00AF25E0 /* LaunchScreen.storyboard */,
 				D9512C482337D20A00AF25E0 /* Info.plist */,
 				D9512C402337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld */,
+				D9B1133024BC4BB30010FF96 /* Parameter.swift */,
 			);
 			path = "UICatalogApp-iOS";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9512C3C2337D20800AF25E0 /* ViewController.swift in Sources */,
+				D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */,
+				D9512C51233899BF00AF25E0 /* PropertiesTableViewCell.swift in Sources */,
 				D9512C422337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld in Sources */,
 				D9512C3A2337D20800AF25E0 /* AppDelegate.swift in Sources */,
 			);
