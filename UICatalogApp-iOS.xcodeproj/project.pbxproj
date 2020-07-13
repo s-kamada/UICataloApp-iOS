@@ -144,9 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9512C51233899BF00AF25E0 /* PropertiesTableViewCell.swift in Sources */,
 				D9512C3C2337D20800AF25E0 /* ViewController.swift in Sources */,
 				D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */,
-				D9512C51233899BF00AF25E0 /* PropertiesTableViewCell.swift in Sources */,
 				D9512C422337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld in Sources */,
 				D9512C3A2337D20800AF25E0 /* AppDelegate.swift in Sources */,
 			);

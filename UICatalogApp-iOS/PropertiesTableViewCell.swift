@@ -15,4 +15,8 @@ class PropertiesTableViewCell: UITableViewCell {
 	@IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var optionSwitch: UISwitch!
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 }

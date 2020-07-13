@@ -12,9 +12,7 @@ class ViewController: UIViewController {
 
 	@IBOutlet weak var previewLabel: UILabel!
     var tableView: UITableView?
-	
-	let cellReusableIdentifier = "tableViewCell"
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -30,9 +28,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReusableIdentifier, for: indexPath) as? TableViewCell else { return
-    //
-    //        }
+            // TODO: なぜかcellのクラスを拾ってくれない
+            // Use of undeclared type 'PropertiesTableViewCell'
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReusableIdentifier, for: indexPath) as! PropertiesTableViewCell
+
             return UITableViewCell.init()
         }
+}
+
+struct Constants {
+    static let cellReusableIdentifier = "propertiesCell"
 }
