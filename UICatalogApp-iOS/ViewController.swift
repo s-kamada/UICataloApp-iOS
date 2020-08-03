@@ -15,13 +15,16 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-//		navigationController?.title = "UILabel"
         
         previewLabel.isAccessibilityElement = false
         tableView.delegate = self
         tableView.dataSource = self
 	}
+
+    // プロパティを更新されたらlabelを更新する
+    private func updateUI() {
+        // プロパティに共通する型とかないの？
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -31,12 +34,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReusableIdentifier, for: indexPath) as! PropertiesTableViewCell
-        cell.detailLabel.text = "DETAIL"
-        cell.titleLabel.text = "TITLE"
-        cell.statusLabel.text = "STATUS"
-        cell.statusLabel.lineBreakMode = .byClipping
-
-        cell.backgroundColor = .red
+        
+        cell.setup()
 
         return cell
     }

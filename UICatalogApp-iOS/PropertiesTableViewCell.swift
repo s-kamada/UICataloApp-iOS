@@ -16,12 +16,24 @@ class PropertiesTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var optionSwitch: UISwitch!
 
-    override func awakeFromNib () {
-        super.awakeFromNib ()
-        // Initialization code
+    func setup() {
+        detailLabel.text = "DETAIL"
+        titleLabel.text = "TITLE"
+        statusLabel.text = "STATUS"
+        statusLabel.lineBreakMode = .byClipping
+
+        backgroundColor = .red
     }
-    override func setSelected (_ selected: Bool, animated: Bool) {
-        super.setSelected (selected, animated: animated)
-        // Configure the view for the selected state
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    @IBAction func didChangeStatus(_ sender: UISwitch) {
+        // buttonのon/offに合わせてそのプロパティを変える
+        // getProperty(プロパティのキー名) = isOnとかしたい
+        // プロパティの名前、テキストなどを一覧したenumを作る
+
+        
     }
 }
