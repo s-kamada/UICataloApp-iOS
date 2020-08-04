@@ -15,6 +15,7 @@
 		D9512C472337D20A00AF25E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9512C452337D20A00AF25E0 /* LaunchScreen.storyboard */; };
 		D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133024BC4BB30010FF96 /* Parameter.swift */; };
 		D9B1133624BC58980010FF96 /* PropertiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133524BC58980010FF96 /* PropertiesTableViewCell.swift */; };
+		D9F9BF1524D97C7B005939FD /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9BF1424D97C7A005939FD /* Property.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D9512C482337D20A00AF25E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B1133024BC4BB30010FF96 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		D9B1133524BC58980010FF96 /* PropertiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropertiesTableViewCell.swift; path = "/Users/s.kamada/works/XcodeProjects/UICatalogApp-iOS/UICatalogApp-iOS/PropertiesTableViewCell.swift"; sourceTree = "<absolute>"; };
+		D9F9BF1424D97C7A005939FD /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D9512C482337D20A00AF25E0 /* Info.plist */,
 				D9512C402337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld */,
 				D9B1133024BC4BB30010FF96 /* Parameter.swift */,
+				D9F9BF1424D97C7A005939FD /* Property.swift */,
 			);
 			path = "UICatalogApp-iOS";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F9BF1524D97C7B005939FD /* Property.swift in Sources */,
 				D9512C3C2337D20800AF25E0 /* ViewController.swift in Sources */,
 				D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */,
 				D9512C422337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld in Sources */,
