@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/s.kamada/works/XcodeProjects/UICatalogApp-iOS/UICatalogApp-iOS/PropertiesTableViewCell.swift">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

@@ -20,11 +20,6 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 	}
-
-    // プロパティを更新されたらlabelを更新する
-    private func updateUI() {
-        // プロパティに共通する型とかないの？
-    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -36,12 +31,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReusableIdentifier, for: indexPath) as! PropertiesTableViewCell
         
         cell.setup()
+        cell.delegate = self
 
         return cell
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+}
+
+extension ViewController: PropertyChangedDelegate {
+    func valueDidChange(_ value: Bool) {
+        previewLabel.text = String(value)
     }
 }
 
