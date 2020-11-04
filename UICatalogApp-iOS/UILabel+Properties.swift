@@ -8,14 +8,9 @@
 
 import Foundation
 
-class UILabelProperties {
+class UILabelPropertiesDataSource {
     var parameter: [Parameter] = [
-        .init(title: <#T##String#>, description: <#T##String#>, type: <#T##ParameterType#>)
-        
-        
-        
-        
-        
-        
+        .init(title: "text", description: "ラベルのテキスト", type: .string),
+        .init(title: "line break", description: "改行の有無", type: .bool)
     ]
 }
