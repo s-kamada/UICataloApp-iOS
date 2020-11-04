@@ -18,10 +18,10 @@ class BoolPropertyTableViewCell: UITableViewCell {
 
     weak var delegate: PropertyChangedDelegate?
 
-    func setup() {
-        detailLabel.text = "DETAIL"
-        titleLabel.text = "TITLE"
-        statusLabel.text = "STATUS"
+    func setup(dataSource: Property) {
+        detailLabel.text = dataSource.description
+        titleLabel.text = dataSource.title
+        statusLabel.text = "status"
         statusLabel.lineBreakMode = .byClipping
     }
 
