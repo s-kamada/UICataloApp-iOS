@@ -28,7 +28,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReusableIdentifier, for: indexPath) as! PropertiesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.boolPropertyCellReusableIdentifier, for: indexPath) as! BoolPropertyTableViewCell
         
         cell.setup()
         cell.delegate = self
@@ -48,5 +48,5 @@ extension ViewController: PropertyChangedDelegate {
 }
 
 struct Constants {
-    static let cellReusableIdentifier = "propertiesCell"
+    static let boolPropertyCellReusableIdentifier = "boolPropertyCell"
 }

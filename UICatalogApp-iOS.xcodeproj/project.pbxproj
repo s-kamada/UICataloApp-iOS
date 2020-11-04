@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92CCD7C2552A992001888CB /* UILabel+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CCD7B2552A992001888CB /* UILabel+Properties.swift */; };
+		D92CCD7E2552AC46001888CB /* StringPropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */; };
 		D9512C3A2337D20800AF25E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9512C392337D20800AF25E0 /* AppDelegate.swift */; };
 		D9512C3C2337D20800AF25E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9512C3B2337D20800AF25E0 /* ViewController.swift */; };
 		D9512C3F2337D20800AF25E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9512C3D2337D20800AF25E0 /* Main.storyboard */; };
@@ -14,11 +16,13 @@
 		D9512C442337D20A00AF25E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9512C432337D20A00AF25E0 /* Assets.xcassets */; };
 		D9512C472337D20A00AF25E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9512C452337D20A00AF25E0 /* LaunchScreen.storyboard */; };
 		D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133024BC4BB30010FF96 /* Parameter.swift */; };
-		D9B1133624BC58980010FF96 /* PropertiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133524BC58980010FF96 /* PropertiesTableViewCell.swift */; };
+		D9B1133624BC58980010FF96 /* BoolPropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */; };
 		D9F9BF1524D97C7B005939FD /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9BF1424D97C7A005939FD /* Property.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D92CCD7B2552A992001888CB /* UILabel+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Properties.swift"; sourceTree = "<group>"; };
+		D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringPropertyTableViewCell.swift; sourceTree = "<group>"; };
 		D9512C362337D20800AF25E0 /* UICatalogApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UICatalogApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9512C392337D20800AF25E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9512C3B2337D20800AF25E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +32,7 @@
 		D9512C462337D20A00AF25E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9512C482337D20A00AF25E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B1133024BC4BB30010FF96 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
-		D9B1133524BC58980010FF96 /* PropertiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropertiesTableViewCell.swift; path = "/Users/s.kamada/works/XcodeProjects/UICatalogApp-iOS/UICatalogApp-iOS/PropertiesTableViewCell.swift"; sourceTree = "<absolute>"; };
+		D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoolPropertyTableViewCell.swift; path = "/Users/s.kamada/works/XcodeProjects/UICatalogApp-iOS/UICatalogApp-iOS/BoolPropertyTableViewCell.swift"; sourceTree = "<absolute>"; };
 		D9F9BF1424D97C7A005939FD /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +66,8 @@
 		D9512C382337D20800AF25E0 /* UICatalogApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D9B1133524BC58980010FF96 /* PropertiesTableViewCell.swift */,
+				D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */,
+				D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */,
 				D9512C392337D20800AF25E0 /* AppDelegate.swift */,
 				D9512C3B2337D20800AF25E0 /* ViewController.swift */,
 				D9512C3D2337D20800AF25E0 /* Main.storyboard */,
@@ -71,6 +76,7 @@
 				D9512C482337D20A00AF25E0 /* Info.plist */,
 				D9512C402337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld */,
 				D9B1133024BC4BB30010FF96 /* Parameter.swift */,
+				D92CCD7B2552A992001888CB /* UILabel+Properties.swift */,
 				D9F9BF1424D97C7A005939FD /* Property.swift */,
 			);
 			path = "UICatalogApp-iOS";
@@ -148,11 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9F9BF1524D97C7B005939FD /* Property.swift in Sources */,
+				D92CCD7E2552AC46001888CB /* StringPropertyTableViewCell.swift in Sources */,
 				D9512C3C2337D20800AF25E0 /* ViewController.swift in Sources */,
+				D92CCD7C2552A992001888CB /* UILabel+Properties.swift in Sources */,
 				D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */,
 				D9512C422337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld in Sources */,
 				D9512C3A2337D20800AF25E0 /* AppDelegate.swift in Sources */,
-				D9B1133624BC58980010FF96 /* PropertiesTableViewCell.swift in Sources */,
+				D9B1133624BC58980010FF96 /* BoolPropertyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

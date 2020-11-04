@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class PropertiesTableViewCell: UITableViewCell {
-	
-	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var detailLabel: UILabel!
+class BoolPropertyTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var optionSwitch: UISwitch!
 
