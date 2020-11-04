@@ -16,7 +16,10 @@ class StringPropertyTableViewCell: UITableViewCell {
     @IBOutlet weak var imputTextField: UITextField!
 
 
-    func setup() {
+    func setup(dataSource: Property) {
+        titleLabel.text = dataSource.title
+        detailLabel.text = dataSource.description
+
         detailLabel.lineBreakMode = .byClipping
     }
 }

@@ -24,16 +24,32 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return UILabelPropertiesDataSource.properties.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.boolPropertyCellReusableIdentifier, for: indexPath) as! BoolPropertyTableViewCell
-        
-        cell.setup()
-        cell.delegate = self
+        let property = UILabelPropertiesDataSource.properties[indexPath.row]
 
-        return cell
+        switch property.type {
+        case .bool:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.boolPropertyCellReusableIdentifier, for: indexPath) as? BoolPropertyTableViewCell else { return UITableViewCell() }
+
+            cell.setup(dataSource: property)
+            cell.delegate = self
+
+            return cell
+
+        case .string:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.stringPropertyCellReusableIdentifier, for: indexPath) as? StringPropertyTableViewCell else { return UITableViewCell() }
+
+            cell.setup(dataSource: property)
+            // TODO: delegate set
+
+            return cell
+
+        default: return UITableViewCell()
+        }
+
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,4 +65,5 @@ extension ViewController: PropertyChangedDelegate {
 
 struct Constants {
     static let boolPropertyCellReusableIdentifier = "boolPropertyCell"
+    static let stringPropertyCellReusableIdentifier = "stringPropertyCell"
 }
