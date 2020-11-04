@@ -10,16 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-	@IBOutlet weak var previewLabel: UILabel!
+    @IBOutlet weak var previewLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         previewLabel.isAccessibilityElement = false
         tableView.delegate = self
         tableView.dataSource = self
-	}
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
