@@ -70,7 +70,7 @@ extension ViewController: StringPropertyChangedDelegate {
 
 extension ViewController: BoolPropertyChangedDelegate {
     func boolValueDidChange(_ value: Bool) {
-        previewLabel.lineBreakMode = value ? .byCharWrapping : .byClipping
+        previewLabel.isEnabled = value
     }
 }
 
