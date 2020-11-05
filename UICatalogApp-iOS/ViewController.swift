@@ -17,6 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         previewLabel.isAccessibilityElement = false
+        // サイズや改行を見やすくするために枠線をつける
+        previewLabel.layer.borderWidth = 1.0
+        previewLabel.layer.borderColor = UIColor.gray.cgColor
+
         tableView.delegate = self
         tableView.dataSource = self
     }
