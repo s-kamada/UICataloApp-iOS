@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false
     }
 }
 
