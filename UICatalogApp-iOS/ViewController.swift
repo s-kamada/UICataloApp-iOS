@@ -57,7 +57,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ViewController: PropertyChangedDelegate {
+extension ViewController: StringPropertyChangedDelegate {
     func valueDidChange(_ value: Bool) {
         previewLabel.text = String(value)
     }

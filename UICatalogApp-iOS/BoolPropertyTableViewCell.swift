@@ -16,7 +16,7 @@ class BoolPropertyTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var optionSwitch: UISwitch!
 
-    weak var delegate: PropertyChangedDelegate?
+    weak var delegate: BoolPropertyChangedDelegate?
 
     func setup(dataSource: Property) {
         detailLabel.text = dataSource.description
@@ -34,6 +34,6 @@ class BoolPropertyTableViewCell: UITableViewCell {
     }
 }
 
-protocol PropertyChangedDelegate: AnyObject {
+protocol BoolPropertyChangedDelegate: AnyObject {
     func valueDidChange(_ value: Bool)
 }
