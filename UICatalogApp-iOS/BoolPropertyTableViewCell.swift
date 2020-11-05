@@ -21,7 +21,7 @@ class BoolPropertyTableViewCell: UITableViewCell {
     func setup(dataSource: Property) {
         detailLabel.text = dataSource.description
         titleLabel.text = dataSource.title
-        statusLabel.text = "status"
+        statusLabel.text = String(optionSwitch.isOn)
         statusLabel.lineBreakMode = .byClipping
     }
 
@@ -31,6 +31,7 @@ class BoolPropertyTableViewCell: UITableViewCell {
         // TODO: 自作Delegateとして実装した方が良さそうか https://qiita.com/s_emoto/items/04505ed549178555b10b
         print("Bool didChangedStatus \(sender.isOn)")
         self.delegate?.boolValueDidChange(sender.isOn)
+        statusLabel.text = String(sender.isOn)
     }
 }
 
