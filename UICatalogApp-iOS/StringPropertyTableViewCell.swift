@@ -15,11 +15,23 @@ class StringPropertyTableViewCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var imputTextField: UITextField!
 
+    weak var delegate: StringPropertyChangedDelegate?
 
     func setup(dataSource: Property) {
         titleLabel.text = dataSource.title
         detailLabel.text = dataSource.description
 
         detailLabel.lineBreakMode = .byClipping
+
+        imputTextField.addTarget(self, action: #selector(valueDidChange(sender:)), for: .editingChanged)
     }
+
+    @objc func valueDidChange(sender: UITextField) {
+        print("string didChangedStatus \(sender.text ?? "")")
+        self.delegate?.stringValueDidChange(sender.text ?? "")
+    }
+}
+
+protocol StringPropertyChangedDelegate: AnyObject {
+    func stringValueDidChange(_ value: String)
 }

@@ -43,7 +43,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.stringPropertyCellReusableIdentifier, for: indexPath) as? StringPropertyTableViewCell else { return UITableViewCell() }
 
             cell.setup(dataSource: property)
-            // TODO: delegate set
+            cell.delegate = self
 
             return cell
 
@@ -58,8 +58,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: StringPropertyChangedDelegate {
-    func valueDidChange(_ value: Bool) {
-        previewLabel.text = String(value)
+    func stringValueDidChange(_ value: String) {
+        previewLabel.text = value
+    }
+}
+
+extension ViewController: BoolPropertyChangedDelegate {
+    func boolValueDidChange(_ value: Bool) {
+        previewLabel.lineBreakMode = value ? .byCharWrapping : .byClipping
     }
 }
 
