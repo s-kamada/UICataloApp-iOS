@@ -66,8 +66,7 @@
 		D9512C382337D20800AF25E0 /* UICatalogApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */,
-				D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */,
+				D9FC984D2554F53800AA2F5B /* TableViewCells */,
 				D9512C392337D20800AF25E0 /* AppDelegate.swift */,
 				D9512C3B2337D20800AF25E0 /* ViewController.swift */,
 				D9512C3D2337D20800AF25E0 /* Main.storyboard */,
@@ -80,6 +79,15 @@
 				D9F9BF1424D97C7A005939FD /* Property.swift */,
 			);
 			path = "UICatalogApp-iOS";
+			sourceTree = "<group>";
+		};
+		D9FC984D2554F53800AA2F5B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */,
+				D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
