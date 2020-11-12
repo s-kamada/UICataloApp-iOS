@@ -71,11 +71,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
         default: return UITableViewCell()
         }
-
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
 }
 
