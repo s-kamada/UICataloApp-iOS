@@ -1,22 +1,27 @@
 //
-//  Property.swift
+//  Parameter.swift
 //  UICatalogApp-iOS
 //
-//  Created by 鎌田峻輔 on 2020/08/04.
+//  Created by 鎌田峻輔 on 2020/07/13.
 //  Copyright © 2020 personal. All rights reserved.
 //
 
 import Foundation
 
-enum LabelProperty {
-    case boolProperty
-
-    var status: Bool {
-        switch self {
-        case .boolProperty:
-            return true
-        default:
-            return false
-        }
-    }
+// TODO: ファイル名変える(Xcodeエラーでできなかったので)
+struct Property {
+    let title: String
+    let description: String
+    let type: ParameterType
+    let option: KeyValuePairs<String, Any>?
 }
+
+enum ParameterType {
+    case bool
+    case string
+    case number
+    case choice
+    case multiChoice
+}
+
+protocol Chooseable {}
