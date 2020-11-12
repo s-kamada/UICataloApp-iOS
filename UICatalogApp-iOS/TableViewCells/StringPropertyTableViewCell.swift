@@ -20,6 +20,7 @@ class StringPropertyTableViewCell: UITableViewCell {
     func setup(dataSource: Property) {
         titleLabel.text = dataSource.title
         detailLabel.text = dataSource.description
+        imputTextField.delegate = self
 
         detailLabel.lineBreakMode = .byClipping
 
@@ -29,6 +30,13 @@ class StringPropertyTableViewCell: UITableViewCell {
     @objc func valueDidChange(sender: UITextField) {
         print("string didChangedStatus \(sender.text ?? "")")
         self.delegate?.stringValueDidChange(sender.text ?? "")
+    }
+}
+
+extension StringPropertyTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
