@@ -19,14 +19,12 @@ final class UILabelPropertiesDataSource {
 
 final class PropertyOptions: Chooseable {
 
-    // Collectionにした方が良さそう(順序を保持するCollection、KeyValuePairs)
-    // https://dev.classmethod.jp/articles/about-swiftkeyvaluepairs/
-    static let textalignment: [String: NSTextAlignment] = [
-        "left": .left,
-        "right": . right,
-        "center": .center,
-        "justified": .justified,
-        "natural": .natural
+    static let textalignment: KeyValuePairs<String, Any>? = [
+        "left": NSTextAlignment.left,
+        "right": NSTextAlignment.right,
+        "center": NSTextAlignment.center,
+        "justified": NSTextAlignment.justified,
+        "natural": NSTextAlignment.natural
     ]
 }
 

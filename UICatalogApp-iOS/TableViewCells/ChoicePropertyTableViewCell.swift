@@ -19,7 +19,7 @@ class ChoicePropertyTableViewCell: UITableViewCell, UITextViewDelegate {
     private let toolBar = UIToolbar()
     private let doneButton = UIBarButtonItem(title: "完了", style: .plain, target: nil, action: nil)
 
-    private var choices: [String: Any]?
+    private var choices: KeyValuePairs<String, Any>?
 
     weak var delegate: ChoicePropertyChangedDelegate?
 

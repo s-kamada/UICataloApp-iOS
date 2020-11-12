@@ -13,7 +13,7 @@ struct Property {
     let title: String
     let description: String
     let type: ParameterType
-    let option: [String: Any]?
+    let option: KeyValuePairs<String, Any>?
 }
 
 enum ParameterType {
