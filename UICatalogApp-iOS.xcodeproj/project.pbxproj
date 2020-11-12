@@ -69,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FC984D2554F53800AA2F5B /* TableViewCells */,
+				D9ED1189255D4C5200910098 /* Parameters */,
 				D9512C392337D20800AF25E0 /* AppDelegate.swift */,
 				D9512C3B2337D20800AF25E0 /* ViewController.swift */,
 				D9512C3D2337D20800AF25E0 /* Main.storyboard */,
@@ -76,11 +77,18 @@
 				D9512C452337D20A00AF25E0 /* LaunchScreen.storyboard */,
 				D9512C482337D20A00AF25E0 /* Info.plist */,
 				D9512C402337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld */,
+			);
+			path = "UICatalogApp-iOS";
+			sourceTree = "<group>";
+		};
+		D9ED1189255D4C5200910098 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
 				D9B1133024BC4BB30010FF96 /* Parameter.swift */,
 				D92CCD7B2552A992001888CB /* UILabel+Properties.swift */,
 				D9F9BF1424D97C7A005939FD /* Property.swift */,
 			);
-			path = "UICatalogApp-iOS";
+			path = Parameters;
 			sourceTree = "<group>";
 		};
 		D9FC984D2554F53800AA2F5B /* TableViewCells */ = {
