@@ -83,6 +83,10 @@ extension ViewController: BoolPropertyChangedDelegate {
 }
 
 extension ViewController: ChoicePropertyChangedDelegate {
+    func doneButtonPressed() {
+        view.endEditing(true)
+    }
+
     func choiceValueDidChange(_ value: Any) {
         print("string didChangedStatus ")
         previewLabel.text = value as? String

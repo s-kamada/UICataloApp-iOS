@@ -17,7 +17,14 @@ class ChoicePropertyTableViewCell: UITableViewCell, UITextViewDelegate {
 
     private let picker = UIPickerView()
     private let toolBar = UIToolbar()
-    private let doneButton = UIBarButtonItem(title: "完了", style: .plain, target: nil, action: nil)
+    private lazy var doneButton: UIBarButtonItem = {
+        let button = UIBarButtonItem()
+        button.title = "完了"
+        button.style = .plain
+        button.action = #selector(doneButtonPressed)
+        button.target = self
+        return button
+    }()
 
     private var choices: KeyValuePairs<String, Any>?
 
@@ -36,6 +43,10 @@ class ChoicePropertyTableViewCell: UITableViewCell, UITextViewDelegate {
 
         choiceField.inputView = picker
         choiceField.inputAccessoryView = toolBar
+    }
+
+    @objc func doneButtonPressed() {
+        delegate?.doneButtonPressed()
     }
 }
 
@@ -61,4 +72,5 @@ extension ChoicePropertyTableViewCell: UIPickerViewDelegate, UIPickerViewDataSou
 
 protocol ChoicePropertyChangedDelegate: AnyObject {
     func choiceValueDidChange(_ value: Any)
+    func doneButtonPressed()
 }
