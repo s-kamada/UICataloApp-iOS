@@ -49,18 +49,13 @@ extension ChoicePropertyTableViewCell: UIPickerViewDelegate, UIPickerViewDataSou
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        choiceField.text = choices[row] as! String
-//        guard let choices = choices else { return }
-//        let key = choices.keys
-//        delegate?.choiceValueDidChange(choices[key])
 
-        choiceField.text = "a"
-        delegate?.choiceValueDidChange("a")
+        choiceField.text = choices?[row].0 ?? ""
+        delegate?.choiceValueDidChange(choices?[row].1 ?? "")
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        guard let key = choices?.keys else { return "" }
-        return "a"
+        return choices?[row].0 ?? ""
     }
 }
 
