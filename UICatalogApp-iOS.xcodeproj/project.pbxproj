@@ -18,7 +18,7 @@
 		D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133024BC4BB30010FF96 /* Parameter.swift */; };
 		D9B1133624BC58980010FF96 /* BoolPropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */; };
 		D9F9BF1524D97C7B005939FD /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9BF1424D97C7A005939FD /* Property.swift */; };
-		D9FC984B2554F51D00AA2F5B /* ChoicePropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC984A2554F51B00AA2F5B /* ChoicePropertyTableViewCell.swift */; };
+		D9FC98522554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		D9B1133024BC4BB30010FF96 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoolPropertyTableViewCell.swift; path = "/Users/s.kamada/works/XcodeProjects/UICatalogApp-iOS/UICatalogApp-iOS/BoolPropertyTableViewCell.swift"; sourceTree = "<absolute>"; };
 		D9F9BF1424D97C7A005939FD /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
-		D9FC984A2554F51B00AA2F5B /* ChoicePropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePropertyTableViewCell.swift; sourceTree = "<group>"; };
+		D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePropertyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 			children = (
 				D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */,
 				D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */,
-				D9FC984A2554F51B00AA2F5B /* ChoicePropertyTableViewCell.swift */,
+				D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 				D92CCD7C2552A992001888CB /* UILabel+Properties.swift in Sources */,
 				D9B1133124BC4BB30010FF96 /* Parameter.swift in Sources */,
 				D9512C422337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld in Sources */,
-				D9FC984B2554F51D00AA2F5B /* ChoicePropertyTableViewCell.swift in Sources */,
+				D9FC98522554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift in Sources */,
 				D9512C3A2337D20800AF25E0 /* AppDelegate.swift in Sources */,
 				D9B1133624BC58980010FF96 /* BoolPropertyTableViewCell.swift in Sources */,
 			);
@@ -319,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PYHJ67X3B8;
+				DEVELOPMENT_TEAM = 5GX5QFC8X3;
 				INFOPLIST_FILE = "UICatalogApp-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,7 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PYHJ67X3B8;
+				DEVELOPMENT_TEAM = 5GX5QFC8X3;
 				INFOPLIST_FILE = "UICatalogApp-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
