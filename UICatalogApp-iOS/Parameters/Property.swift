@@ -8,7 +8,6 @@
 
 import Foundation
 
-// TODO: ファイル名変える(Xcodeエラーでできなかったので)
 struct Property {
     let title: String
     let description: String
