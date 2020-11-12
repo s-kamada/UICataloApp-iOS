@@ -8,14 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var previewLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
-    /* for test */
-    @IBOutlet weak var testTextField: UITextField!
-    private let testPicker = UIPickerView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,33 +24,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-
-        testSetup()
-    }
-
-    /* for test */
-    func testSetup() {
-        testPicker.delegate = self
-        testPicker.dataSource = self
-
-        testTextField.inputView = testPicker
-        testTextField.placeholder = "test placeholder"
-    }
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "a"
-    }
-
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        testTextField.text = "selected \(String(row))"
     }
 }
 
@@ -84,8 +53,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
 
         case .choice:
-
-
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.choicePropertyCellReuseIdentifier, for: indexPath) as? ChoicePropertyTableViewCell else { return UITableViewCell() }
 
             cell.setup(datasource: property)
