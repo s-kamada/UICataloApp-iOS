@@ -13,6 +13,7 @@ struct Property {
     let title: String
     let description: String
     let type: ParameterType
+    let option: [String: Any]?
 }
 
 enum ParameterType {
@@ -20,5 +21,7 @@ enum ParameterType {
     case string
     case number
     case choice
-    case multipleChoice
+    case multiChoice
 }
+
+protocol Chooseable {}
