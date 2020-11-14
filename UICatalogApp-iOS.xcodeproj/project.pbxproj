@@ -17,6 +17,7 @@
 		D9512C472337D20A00AF25E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9512C452337D20A00AF25E0 /* LaunchScreen.storyboard */; };
 		D9B1133124BC4BB30010FF96 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133024BC4BB30010FF96 /* Property.swift */; };
 		D9B1133624BC58980010FF96 /* BoolPropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */; };
+		D9BCD0F6255FEE00006C2987 /* NumberPropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BCD0F5255FEE00006C2987 /* NumberPropertyTableViewCell.swift */; };
 		D9FC98522554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		D9512C482337D20A00AF25E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B1133024BC4BB30010FF96 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoolPropertyTableViewCell.swift; path = "/Users/s.kamada/works/XcodeProjects/UICatalogApp-iOS/UICatalogApp-iOS/BoolPropertyTableViewCell.swift"; sourceTree = "<absolute>"; };
+		D9BCD0F5255FEE00006C2987 /* NumberPropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPropertyTableViewCell.swift; sourceTree = "<group>"; };
 		D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePropertyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				D9B1133524BC58980010FF96 /* BoolPropertyTableViewCell.swift */,
 				D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */,
 				D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */,
+				D9BCD0F5255FEE00006C2987 /* NumberPropertyTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BCD0F6255FEE00006C2987 /* NumberPropertyTableViewCell.swift in Sources */,
 				D92CCD7E2552AC46001888CB /* StringPropertyTableViewCell.swift in Sources */,
 				D9512C3C2337D20800AF25E0 /* ViewController.swift in Sources */,
 				D92CCD7C2552A992001888CB /* UILabel+Properties.swift in Sources */,

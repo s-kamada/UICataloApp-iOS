@@ -69,6 +69,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cell
 
+        case .number:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.numberPropertyCellReuseIdentifier, for: indexPath) as? NumberPropertyTableViewCell else { return UITableViewCell() }
+
+            cell.setup(dataSource: property)
+            cell.delegate = self
+
+            return cell
+
         default: return UITableViewCell()
         }
     }
@@ -97,8 +105,15 @@ extension ViewController: ChoicePropertyChangedDelegate {
     }
 }
 
+extension ViewController: NumberPropertyChangedDelegate {
+    func numberPropertyDidChange(_ value: Double) {
+        previewLabel.text = String(value)
+    }
+}
+
 struct Constants {
     static let boolPropertyCellReusableIdentifier = "boolPropertyCell"
     static let stringPropertyCellReusableIdentifier = "stringPropertyCell"
     static let choicePropertyCellReuseIdentifier = "choicePropertyCell"
+    static let numberPropertyCellReuseIdentifier = "numberPropertyCell"
 }
