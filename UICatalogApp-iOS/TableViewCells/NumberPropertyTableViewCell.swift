@@ -31,7 +31,7 @@ class NumberPropertyTableViewCell: UITableViewCell {
 
     @IBAction func valueChanged(_ sender: UIStepper) {
         numberLabel.text = String(sender.value)
-
+        delegate?.numberPropertyDidChange(sender.value)
     }
 }
 
