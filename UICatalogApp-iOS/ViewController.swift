@@ -8,6 +8,17 @@
 
 import UIKit
 
+// TODO: numberセルをつくる
+// - ナンバーのキーボード
+// - 範囲や刻み(整数じゃないといけないとか0~1じゃないといけないとか)はあるっぽい
+// -> 作り込むならvalidationがひつよう
+
+// TODO: Property.titleの文字列からプロパティ名を拾いたい
+// func valueDidChange(value: Any) {
+//     previewLabel.getProperty(property.title) = value
+// }
+// みたいなことをしたい
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var previewLabel: UILabel!
