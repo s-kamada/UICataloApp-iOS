@@ -16,8 +16,10 @@ class StringPropertyTableViewCell: UITableViewCell {
     @IBOutlet weak var imputTextField: UITextField!
 
     weak var delegate: StringPropertyChangedDelegate?
+    var datasource: Property?
 
     func setup(dataSource: Property) {
+        self.datasource = dataSource
         titleLabel.text = dataSource.title
         detailLabel.text = dataSource.description
         imputTextField.delegate = self
@@ -29,7 +31,10 @@ class StringPropertyTableViewCell: UITableViewCell {
 
     @objc func valueDidChange(sender: UITextField) {
         print("string didChangedStatus \(sender.text ?? "")")
-        self.delegate?.stringValueDidChange(sender.text ?? "")
+
+        guard let datasource = datasource else { return }
+
+        self.delegate?.stringValueDidChange(key: datasource.title, value: sender.text ?? "")
     }
 }
 
@@ -41,5 +46,5 @@ extension StringPropertyTableViewCell: UITextFieldDelegate {
 }
 
 protocol StringPropertyChangedDelegate: AnyObject {
-    func stringValueDidChange(_ value: String)
+    func stringValueDidChange(key: String, value: String)
 }

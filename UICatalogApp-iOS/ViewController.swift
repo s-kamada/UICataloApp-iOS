@@ -94,8 +94,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: StringPropertyChangedDelegate {
-    func stringValueDidChange(_ value: String) {
-        previewLabel.text = value
+    func stringValueDidChange(key: String, value: String) {
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 
