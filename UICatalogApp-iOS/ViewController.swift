@@ -111,8 +111,8 @@ extension ViewController: ChoicePropertyChangedDelegate {
     }
 
     func choiceValueDidChange(_ value: Any) {
-        print("string didChangedStatus ")
-        previewLabel.text = value as? String
+        print("choice didChangedStatus ")
+        previewLabel.textAlignment = value as? NSTextAlignment ?? .right
     }
 }
 
