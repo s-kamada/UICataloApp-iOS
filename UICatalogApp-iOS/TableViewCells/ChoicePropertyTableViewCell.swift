@@ -15,6 +15,8 @@ class ChoicePropertyTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var choiceField: UITextField!
 
+    var datasource: Property?
+
     private let picker = UIPickerView()
     private let toolBar = UIToolbar()
     private lazy var doneButton: UIBarButtonItem = {
@@ -31,6 +33,7 @@ class ChoicePropertyTableViewCell: UITableViewCell, UITextViewDelegate {
     weak var delegate: ChoicePropertyChangedDelegate?
 
     func setup(datasource: Property) {
+        self.datasource = datasource
         titleLabel.text = datasource.title
         detailLabel.text = datasource.description
         choices = datasource.option
@@ -61,8 +64,10 @@ extension ChoicePropertyTableViewCell: UIPickerViewDelegate, UIPickerViewDataSou
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 
+        guard let datasource = datasource else { return }
+
         choiceField.text = choices?[row].0 ?? ""
-        delegate?.choiceValueDidChange(choices?[row].1 ?? "")
+        delegate?.choiceValueDidChange(key: datasource.title, value: choices?[row].1 ?? "")
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -71,6 +76,6 @@ extension ChoicePropertyTableViewCell: UIPickerViewDelegate, UIPickerViewDataSou
 }
 
 protocol ChoicePropertyChangedDelegate: AnyObject {
-    func choiceValueDidChange(_ value: Any)
+    func choiceValueDidChange(key: String, value: Any)
     func doneButtonPressed()
 }

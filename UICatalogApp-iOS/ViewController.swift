@@ -26,7 +26,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//
+//        print(previewLabel.dictionaryWithValues(forKeys: ["text", "textColor", "textAlignment", "isEnabled"]))
+//        previewLabel.setValuesForKeys(["text": "hogehoge"])
+//
         previewLabel.isAccessibilityElement = false
         // サイズや改行を見やすくするために枠線をつける
         previewLabel.layer.borderWidth = 1.0
@@ -100,8 +103,10 @@ extension ViewController: StringPropertyChangedDelegate {
 }
 
 extension ViewController: BoolPropertyChangedDelegate {
-    func boolValueDidChange(_ value: Bool) {
-        previewLabel.isEnabled = value
+    func boolValueDidChange(key: String, value: Bool) {
+//        previewLabel.isEnabled = value
+        // todo:  this class is not key value coding-compliant for the key isEnabled.'になる
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 
@@ -110,9 +115,11 @@ extension ViewController: ChoicePropertyChangedDelegate {
         view.endEditing(true)
     }
 
-    func choiceValueDidChange(_ value: Any) {
+    func choiceValueDidChange(key: String, value: Any) {
         print("choice didChangedStatus ")
-        previewLabel.textAlignment = value as? NSTextAlignment ?? .right
+//        previewLabel.textAlignment = value as? NSTextAlignment ?? .right
+        // TODO: Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__SwiftValue longLongValue]: unrecognized selector sent to instance 0x2820d6580'になる
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 
