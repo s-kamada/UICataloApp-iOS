@@ -104,9 +104,9 @@ extension ViewController: StringPropertyChangedDelegate {
 
 extension ViewController: BoolPropertyChangedDelegate {
     func boolValueDidChange(key: String, value: Bool) {
-//        previewLabel.isEnabled = value
         // todo:  this class is not key value coding-compliant for the key isEnabled.'になる
-        previewLabel.setValuesForKeys([key: value])
+//        previewLabel.setValuesForKeys([key: value] as [String: Bool])
+        previewLabel.setValue(value, forKey: key)
     }
 }
 
@@ -117,9 +117,8 @@ extension ViewController: ChoicePropertyChangedDelegate {
 
     func choiceValueDidChange(key: String, value: Any) {
         print("choice didChangedStatus ")
-//        previewLabel.textAlignment = value as? NSTextAlignment ?? .right
         // TODO: Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__SwiftValue longLongValue]: unrecognized selector sent to instance 0x2820d6580'になる
-        previewLabel.setValuesForKeys([key: value])
+        previewLabel.setValuesForKeys([key: value] as [String: Any])
     }
 }
 
