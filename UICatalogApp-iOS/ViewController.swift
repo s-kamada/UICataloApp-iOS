@@ -30,6 +30,19 @@ class ViewController: UIViewController {
 //        print(previewLabel.dictionaryWithValues(forKeys: ["text", "textColor", "textAlignment", "isEnabled"]))
 //        previewLabel.setValuesForKeys(["text": "hogehoge"])
 //
+
+//        let values = previewLabel.dictionaryWithValues(forKeys: ["isEnabled"])
+//        print(values)
+
+        var count: UInt32 = 0
+        let properties = class_copyPropertyList(UILabel.self, &count)
+        for i in 0..<Int(count) {
+            let prop = (properties?[i])!
+            let propName = NSString(utf8String: property_getName(prop))
+            print(propName!)
+            previewLabel.value(forKey: propName! as String)
+        }
+
         previewLabel.isAccessibilityElement = false
         // サイズや改行を見やすくするために枠線をつける
         previewLabel.layer.borderWidth = 1.0
@@ -105,8 +118,15 @@ extension ViewController: StringPropertyChangedDelegate {
 extension ViewController: BoolPropertyChangedDelegate {
     func boolValueDidChange(key: String, value: Bool) {
         // todo:  this class is not key value coding-compliant for the key isEnabled.'になる
-//        previewLabel.setValuesForKeys([key: value] as [String: Bool])
-        previewLabel.setValue(value, forKey: key)
+
+        if (responds(to: NSSelectorFromString(key))) {
+            print("not respond to \(key)")
+            return
+        }
+        let boolValue = value ? 1 : 0
+//        previewLabel.setValue(boolValue, forKey: key)
+//        previewLabel.setValuesForKeys([key: boolValue])
+        previewLabel.set
     }
 }
 
@@ -118,7 +138,8 @@ extension ViewController: ChoicePropertyChangedDelegate {
     func choiceValueDidChange(key: String, value: Any) {
         print("choice didChangedStatus ")
         // TODO: Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__SwiftValue longLongValue]: unrecognized selector sent to instance 0x2820d6580'になる
-        previewLabel.setValuesForKeys([key: value] as [String: Any])
+//        previewLabel.setValuesForKeys([key: value] as [String: Any])
+        previewLabel.setValue(value, forUndefinedKey: key)
     }
 }
 
