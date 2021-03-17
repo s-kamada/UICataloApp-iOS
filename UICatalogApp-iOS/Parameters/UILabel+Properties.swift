@@ -12,7 +12,7 @@ import UIKit
 final class UILabelPropertiesDataSource {
     static let properties: [Property] = [
         .init(title: "text", description: "", type: .string, option: nil),
-        .init(title: "isEnabled", description: "", type: .bool, option: nil),
+        .init(title: "enabled", description: "", type: .bool, option: nil),
         .init(title: "textAlignment", description: "中央/左/右寄せなど", type: .choice, option: PropertyOptions.textalignment),
         .init(title: "line", description: "行数", type: .number, option: PropertyOptions.textLines)
     ]

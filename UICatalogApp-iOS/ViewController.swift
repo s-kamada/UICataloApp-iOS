@@ -117,16 +117,14 @@ extension ViewController: StringPropertyChangedDelegate {
 
 extension ViewController: BoolPropertyChangedDelegate {
     func boolValueDidChange(key: String, value: Bool) {
-        // todo:  this class is not key value coding-compliant for the key isEnabled.'になる
 
-        if (responds(to: NSSelectorFromString(key))) {
-            print("not respond to \(key)")
-            return
-        }
-        let boolValue = value ? 1 : 0
-//        previewLabel.setValue(boolValue, forKey: key)
-//        previewLabel.setValuesForKeys([key: boolValue])
-        previewLabel.set
+        // 存在しないkeyの時、returnする。 todo: 必要か考慮？
+//        if (responds(to: NSSelectorFromString(key))) {
+//            print("not respond to \(key)")
+//            return
+//        }
+
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 
