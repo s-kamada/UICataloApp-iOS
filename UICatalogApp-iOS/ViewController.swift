@@ -26,7 +26,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        #if DEBUG
+//        let values = previewLabel.dictionaryWithValues(forKeys: ["textAlignment"])
+//        print(values)
+
+        var count: UInt32 = 0
+        let properties = class_copyPropertyList(UILabel.self, &count)
+        for i in 0..<Int(count) {
+            let prop = (properties?[i])!
+            let propName = NSString(utf8String: property_getName(prop))
+            print(propName!)
+            previewLabel.value(forKey: propName! as String)
+        }
+        #endif
+
         previewLabel.isAccessibilityElement = false
         // サイズや改行を見やすくするために枠線をつける
         previewLabel.layer.borderWidth = 1.0
@@ -94,14 +107,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: StringPropertyChangedDelegate {
-    func stringValueDidChange(_ value: String) {
-        previewLabel.text = value
+    func stringValueDidChange(key: String, value: String) {
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 
 extension ViewController: BoolPropertyChangedDelegate {
-    func boolValueDidChange(_ value: Bool) {
-        previewLabel.isEnabled = value
+    func boolValueDidChange(key: String, value: Bool) {
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 
@@ -110,9 +123,8 @@ extension ViewController: ChoicePropertyChangedDelegate {
         view.endEditing(true)
     }
 
-    func choiceValueDidChange(_ value: Any) {
-        print("choice didChangedStatus ")
-        previewLabel.textAlignment = value as? NSTextAlignment ?? .right
+    func choiceValueDidChange(key: String, value: Any) {
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 

@@ -17,8 +17,10 @@ class BoolPropertyTableViewCell: UITableViewCell {
     @IBOutlet weak var optionSwitch: UISwitch!
 
     weak var delegate: BoolPropertyChangedDelegate?
+    var datasource: Property?
 
     func setup(dataSource: Property) {
+        self.datasource = dataSource
         detailLabel.text = dataSource.description
         titleLabel.text = dataSource.title
         statusLabel.text = String(optionSwitch.isOn)
@@ -30,11 +32,12 @@ class BoolPropertyTableViewCell: UITableViewCell {
         // getProperty(プロパティのキー名) = isOnとかしたい
         // TODO: 自作Delegateとして実装した方が良さそうか https://qiita.com/s_emoto/items/04505ed549178555b10b
         print("Bool didChangedStatus \(sender.isOn)")
-        self.delegate?.boolValueDidChange(sender.isOn)
+        guard let datasource = datasource else { return }
+        self.delegate?.boolValueDidChange(key: datasource.title, value: sender.isOn)
         statusLabel.text = String(sender.isOn)
     }
 }
 
 protocol BoolPropertyChangedDelegate: AnyObject {
-    func boolValueDidChange(_ value: Bool)
+    func boolValueDidChange(key: String, value: Bool)
 }
