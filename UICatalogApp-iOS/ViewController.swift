@@ -26,12 +26,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        print(previewLabel.dictionaryWithValues(forKeys: ["text", "textColor", "textAlignment", "isEnabled"]))
-//        previewLabel.setValuesForKeys(["text": "hogehoge"])
-//
-
-//        let values = previewLabel.dictionaryWithValues(forKeys: ["isEnabled"])
+        #if DEBUG
+//        let values = previewLabel.dictionaryWithValues(forKeys: ["textAlignment"])
 //        print(values)
 
         var count: UInt32 = 0
@@ -42,6 +38,7 @@ class ViewController: UIViewController {
             print(propName!)
             previewLabel.value(forKey: propName! as String)
         }
+        #endif
 
         previewLabel.isAccessibilityElement = false
         // サイズや改行を見やすくするために枠線をつける
@@ -117,13 +114,6 @@ extension ViewController: StringPropertyChangedDelegate {
 
 extension ViewController: BoolPropertyChangedDelegate {
     func boolValueDidChange(key: String, value: Bool) {
-
-        // 存在しないkeyの時、returnする。 todo: 必要か考慮？
-//        if (responds(to: NSSelectorFromString(key))) {
-//            print("not respond to \(key)")
-//            return
-//        }
-
         previewLabel.setValuesForKeys([key: value])
     }
 }
@@ -134,10 +124,7 @@ extension ViewController: ChoicePropertyChangedDelegate {
     }
 
     func choiceValueDidChange(key: String, value: Any) {
-        print("choice didChangedStatus ")
-        // TODO: Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__SwiftValue longLongValue]: unrecognized selector sent to instance 0x2820d6580'になる
-//        previewLabel.setValuesForKeys([key: value] as [String: Any])
-        previewLabel.setValue(value, forUndefinedKey: key)
+        previewLabel.setValuesForKeys([key: value])
     }
 }
 
