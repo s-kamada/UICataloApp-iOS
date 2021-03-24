@@ -19,6 +19,13 @@ final class UILabelPropertiesDataSource {
         ),
 
         .init(
+            title: "textColor",
+            description: "",
+            type: .choice,
+            option: PropertyOptions.colors
+        ),
+
+        .init(
             title: "enabled",
             description: "",
             type: .bool,
@@ -29,6 +36,27 @@ final class UILabelPropertiesDataSource {
             title: "highlighted",
             description: "",
             type: .bool,
+            option: nil
+        ),
+
+        .init(
+            title: "highlightedTextColor",
+            description: "",
+            type: .choice,
+            option: PropertyOptions.colors
+        ),
+
+        .init(
+            title: "shadowColor",
+            description: "",
+            type: .choice,
+            option: PropertyOptions.colors
+        ),
+
+        .init(
+            title: "shadowOffset",
+            description: "",
+            type: .number,
             option: nil
         ),
 
@@ -58,6 +86,38 @@ final class PropertyOptions: Chooseable {
         "center": NSTextAlignment.center.rawValue,
         "justified": NSTextAlignment.justified.rawValue,
         "natural": NSTextAlignment.natural.rawValue
+    ]
+
+    static let colors: KeyValuePairs<String, Any>? = [
+        "systemblue": UIColor.systemBlue,
+        "systemred": UIColor.systemRed,
+        "systempink": UIColor.systemPink,
+        "systemteal": UIColor.systemTeal,
+        "systemgray": UIColor.systemGray,
+        "systemgreen": UIColor.systemGreen,
+        "systemorange": UIColor.systemOrange,
+        "systemyellow": UIColor.systemYellow,
+        "systempurple": UIColor.systemPurple,
+        "black": UIColor.black,
+        "blue": UIColor.blue,
+        "red": UIColor.red,
+        "green": UIColor.green,
+        "gray": UIColor.gray,
+        "white": UIColor.white,
+        "purple": UIColor.purple,
+        "brown": UIColor.brown,
+        "cyan": UIColor.cyan,
+        "magenta": UIColor.magenta,
+        "orange": UIColor.orange,
+        "yellow": UIColor.yellow
+        // ios13以降対応なので保留
+//        "systemfill": UIColor.systemFill,
+//        "systemindigo": UIColor.systemIndigo,
+//        "systemgray2": UIColor.systemGray2,
+//        "systemgray3": UIColor.systemGray3,
+//        "systemgray4": UIColor.systemGray4,
+//        "systemgray5": UIColor.systemGray5,
+//        "systemgray6": UIColor.systemGray6,
     ]
 
     // MARK: number values
