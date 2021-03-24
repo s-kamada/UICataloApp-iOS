@@ -72,10 +72,18 @@ final class UILabelPropertiesDataSource {
             description: "行数",
             type: .number,
             option: PropertyOptions.textLines
+        ),
+
+        .init(
+            title: "lineBreakMode",
+            description: "",
+            type: .choice,
+            option: PropertyOptions.lineBreakModes
         )
     ]
 }
 
+// TODO: これらも自動で取得できるか調査？
 final class PropertyOptions: Chooseable {
 
     // MARK: choice values
@@ -126,6 +134,15 @@ final class PropertyOptions: Chooseable {
         "minimumValue": 0,
         "maxValue": 100,
         "step": 1
+    ]
+
+    static let lineBreakModes: KeyValuePairs<String, Any>? = [
+        "byClipping": NSLineBreakMode.byClipping,
+        "byCharWrapping": NSLineBreakMode.byCharWrapping,
+        "byTruncatingHead": NSLineBreakMode.byTruncatingHead,
+        "byTruncatingMiddle": NSLineBreakMode.byTruncatingMiddle,
+        "byTruncatingTail": NSLineBreakMode.byTruncatingTail,
+        "byWordWrapping": NSLineBreakMode.byWordWrapping
     ]
 
     static let textAlpha: KeyValuePairs<String, Any>? = [
