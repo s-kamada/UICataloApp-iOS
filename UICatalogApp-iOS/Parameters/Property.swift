@@ -21,6 +21,7 @@ enum ParameterType {
     case number
     case choice
     case multiChoice
+    case button
 }
 
 protocol Chooseable {}

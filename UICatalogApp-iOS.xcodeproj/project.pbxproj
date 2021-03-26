@@ -19,6 +19,7 @@
 		D9B1133124BC4BB30010FF96 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1133024BC4BB30010FF96 /* Property.swift */; };
 		D9BCD0F6255FEE00006C2987 /* NumberPropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BCD0F5255FEE00006C2987 /* NumberPropertyTableViewCell.swift */; };
 		D9FC98522554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */; };
+		D9FE9C41260CD4A400CB110B /* SimpleButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE9C40260CD4A400CB110B /* SimpleButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D9B1133024BC4BB30010FF96 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		D9BCD0F5255FEE00006C2987 /* NumberPropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPropertyTableViewCell.swift; sourceTree = "<group>"; };
 		D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePropertyTableViewCell.swift; sourceTree = "<group>"; };
+		D9FE9C40260CD4A400CB110B /* SimpleButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				D92CCD7D2552AC46001888CB /* StringPropertyTableViewCell.swift */,
 				D9FC98512554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift */,
 				D9BCD0F5255FEE00006C2987 /* NumberPropertyTableViewCell.swift */,
+				D9FE9C40260CD4A400CB110B /* SimpleButtonTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				D92CCD7C2552A992001888CB /* UILabel+Properties.swift in Sources */,
 				D9B1133124BC4BB30010FF96 /* Property.swift in Sources */,
 				D9512C422337D20800AF25E0 /* UICatalogApp_iOS.xcdatamodeld in Sources */,
+				D9FE9C41260CD4A400CB110B /* SimpleButtonTableViewCell.swift in Sources */,
 				D9FC98522554F9D400AA2F5B /* ChoicePropertyTableViewCell.swift in Sources */,
 				D9512C3A2337D20800AF25E0 /* AppDelegate.swift in Sources */,
 			);

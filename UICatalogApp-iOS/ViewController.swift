@@ -101,7 +101,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cell
 
+        case .button:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleButtonTableViewCell", for: indexPath) as? SimpleButtonTableViewCell else { return UITableViewCell() }
+
+            cell.setup(title: property.title)
+            return cell
+
         default: return UITableViewCell()
+        }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let property = UILabelPropertiesDataSource.properties[indexPath.row]
+
+        switch property.type {
+        case .button:
+            print("button pushed")
+            break
+
+        default: break
         }
     }
 }
@@ -139,4 +157,11 @@ struct Constants {
     static let stringPropertyCellReusableIdentifier = "stringPropertyCell"
     static let choicePropertyCellReuseIdentifier = "choicePropertyCell"
     static let numberPropertyCellReuseIdentifier = "numberPropertyCell"
+
+    // TODO: もう少し違うところに置く
+    static let dummySentents = "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。"
+
+    static let dummyLongSentents = "山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。"
+
+    static let dummyEnglishSentents = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 }
