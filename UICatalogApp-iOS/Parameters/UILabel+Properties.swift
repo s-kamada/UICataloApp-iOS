@@ -79,6 +79,20 @@ final class UILabelPropertiesDataSource {
             description: "",
             type: .choice,
             option: PropertyOptions.lineBreakModes
+        ),
+
+        .init(
+            title: "lineBreakStrategy",
+            description: "",
+            type: .choice,
+            option: PropertyOptions.lineBreakStrategies
+        ),
+
+        .init(
+            title: "test button",
+            description: "",
+            type: .button,
+            option: nil
         )
     ]
 }
@@ -126,6 +140,13 @@ final class PropertyOptions: Chooseable {
 //        "systemgray4": UIColor.systemGray4,
 //        "systemgray5": UIColor.systemGray5,
 //        "systemgray6": UIColor.systemGray6,
+    ]
+
+    static let lineBreakStrategies: KeyValuePairs<String, Any>? = [
+        "": NSParagraphStyle.LineBreakStrategy.pushOut
+        // ios14以降対応なので保留
+//        "": NSParagraphStyle.LineBreakStrategy.standard,
+//        "": NSParagraphStyle.LineBreakStrategy.hangulWordPriority
     ]
 
     // MARK: number values
