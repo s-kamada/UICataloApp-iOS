@@ -152,7 +152,7 @@ final class PropertyOptions: Chooseable {
     // MARK: number values
     static let textLines: KeyValuePairs<String, Any>? = [
         "default": 1,
-        "minimumValue": 0,
+        "minimumValue": 1,
         "maxValue": 100,
         "step": 1
     ]
