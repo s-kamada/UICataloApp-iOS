@@ -89,8 +89,22 @@ final class UILabelPropertiesDataSource {
         ),
 
         .init(
-            title: "test button",
+            title: "dummySentents",
             description: "",
+            type: .button,
+            option: nil
+        ),
+
+        .init(
+            title: "dummyLongSentents",
+            description: "ダミー文",
+            type: .button,
+            option: nil
+        ),
+
+        .init(
+            title: "dummyEnglishSentents",
+            description: "ダミー文",
             type: .button,
             option: nil
         )
