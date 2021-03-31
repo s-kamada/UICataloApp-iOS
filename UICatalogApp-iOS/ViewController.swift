@@ -102,7 +102,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
 
         case .button:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleButtonTableViewCell", for: indexPath) as? SimpleButtonTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.simpleButtonCellReuseIdentifier, for: indexPath) as? SimpleButtonTableViewCell else { return UITableViewCell() }
 
             cell.setup(title: property.title)
             return cell
@@ -157,6 +157,7 @@ struct Constants {
     static let stringPropertyCellReusableIdentifier = "stringPropertyCell"
     static let choicePropertyCellReuseIdentifier = "choicePropertyCell"
     static let numberPropertyCellReuseIdentifier = "numberPropertyCell"
+    static let simpleButtonCellReuseIdentifier = "SimpleButtonTableViewCell"
 
     // TODO: もう少し違うところに置く
     static let dummySentents = "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。"
